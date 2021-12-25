@@ -14,15 +14,36 @@ body{
     padding: 0 42px 0 42px;
 }
 
+#left-icons, #right-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+#profile-pic{
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+}
 #task-div{
-    width: 60%;
     margin: auto;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 55px 0 55px;
+}
+#main-ui{
     max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #tasks{
     margin: 20px 0 10px 0;
-    
+    flex: 1;
 }
 
 li{
@@ -37,3 +58,47 @@ header{
     display: flex;
 }
 
+#add-task-div{
+}
+
+#add-task-input{
+    width: 100%;
+    height: 115px;
+    background-color: #171717;;
+    border: solid hsla(0,0%,100%,.1) 1px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 10px;
+}
+#add-task-input:focus{
+    border: solid hsla(0,0%,100%,.4) 1px;
+}
+#final-btns{
+    padding: 10px 0 0;
+    display: flex;
+}
+.final-btn{
+    font-size: 14px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+#task-add{
+    background-color: rgb(222, 76, 74);
+    color: rgb(255, 255, 255);
+    border: none;
+    margin-right: 12px;
+}
+#cancel{
+    background: transparent;
+    border: 1px solid #525252;
+    color: hsla(0,0%,100%,.88);
+}
+
+#list-task-add-btn{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    cursor: pointer;
+}
