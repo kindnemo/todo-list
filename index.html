@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styling.css">
 
-
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    
+    
     <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -30,7 +33,7 @@
             </div>
 
             <div id="right-icons">
-                <span class="right-icon btn add-task material-icons">add</span>
+                <span class="right-icon btn add-task task-add-btn material-icons">add</span>
                 <span id="completion" class="material-icons right-icon btn">done</span>
                 <span id="theme" class="right-icon btn material-icons">light_mode</span>
                 <span id="notif" class="right-icon btn material-icons">notifications</span>
@@ -61,14 +64,14 @@
                     <!-- <li>Tasks</li> -->
                 </ul>
                 <div id="task-add-form">
-                    <div id="add-task-div">
-                        <textarea name="" id="add-task-input" cols="30" rows="10"></textarea>
+                    <div id="add-task-div" class="display-toggle">
+                        <textarea name="" id="add-task-input" cols="30" rows="10" placeholder="Add a task here"></textarea>
                         <div id="final-btns">
                             <button id="task-add" class="final-btn btn">Add task</button>
                             <button id="cancel" class="final-btn btn">Cancel</button>
                         </div>
                     </div>
-                    <div id="list-task-add-btn" class="btn">
+                    <div id="list-task-add-btn" class="btn task-add-btn task-add-btns">
                         <span class="add-task material-icons" id="final-add-btn">add</span>
                         <span id="add-task-text">Add task</span>
                     </div>
