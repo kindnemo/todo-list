@@ -4,6 +4,10 @@ body{
     color: white;
 }
 
+.btn{
+    cursor: pointer;
+}
+
 #navbar{
     background-color: #282828;
     display: flex;
@@ -56,10 +60,19 @@ li{
 }
 header{
     display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+#date{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
 }
 
-#add-task-div{
-}
 
 #add-task-input{
     width: 100%;
@@ -69,6 +82,10 @@ header{
     border-radius: 5px;
     outline: none;
     padding: 10px 10px;
+    resize: none;
+    color: hsla(0,0%,100%,.87);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
 }
 #add-task-input:focus{
     border: solid hsla(0,0%,100%,.4) 1px;
@@ -98,7 +115,21 @@ header{
 #list-task-add-btn{
     display: flex;
     align-items: center;
+    font-size: 14px;
+    color: grey;
 }
-.btn{
-    cursor: pointer;
+#final-add-btn{
+    margin-right: 11px;
+    font-size: 20px;
+    color: #de4c4a;
+    border-radius: 50%;    
+}
+
+#list-task-add-btn:hover{
+    color: #de4c4a;
+}
+
+#list-task-add-btn:hover > #final-add-btn{
+    color: white;
+    background-color: #de4c4a;
 }
