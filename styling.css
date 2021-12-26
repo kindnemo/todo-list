@@ -8,6 +8,7 @@ body{
     cursor: pointer;
 }
 
+
 #navbar{
     background-color: #282828;
     display: flex;
@@ -112,7 +113,7 @@ h1{
     color: hsla(0,0%,100%,.88);
 }
 
-#list-task-add-btn{
+.task-add-btns{       /*Substitute for #list-task-add-btn to tackle the precedence problem*/
     display: flex;
     align-items: center;
     font-size: 14px;
@@ -132,4 +133,8 @@ h1{
 #list-task-add-btn:hover > #final-add-btn{
     color: white;
     background-color: #de4c4a;
+}
+
+.display-toggle{
+    display: none;
 }
