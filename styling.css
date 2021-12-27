@@ -138,3 +138,35 @@ h1{
 .display-toggle{
     display: none;
 }
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+#check-btn{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: transparent;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#check-btn:hover{
+    background-color: hsla(0,0%,50.2%,.2);
+}
+#check-mark-image{
+    height: 10px;
+    width: 8px;
+}
+#check-mark-span{
+    visibility: hidden;
+}
+#check-btn:hover > #check-mark-span{
+    visibility: visible;
+}
