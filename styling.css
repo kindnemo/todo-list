@@ -144,7 +144,7 @@ li{
     justify-content: baseline;
 }
 
-#check-btn{
+.check-btn{
     height: 16px;
     width: 16px;
     border-radius: 50%;
@@ -157,16 +157,16 @@ li{
     align-items: center;
     justify-content: center;
 }
-#check-btn:hover{
+.check-btn:hover{
     background-color: hsla(0,0%,50.2%,.2);
 }
-#check-mark-image{
+.check-mark-image{
     height: 10px;
     width: 8px;
 }
-#check-mark-span{
+.check-mark-span{
     visibility: hidden;
 }
-#check-btn:hover > #check-mark-span{
+.check-btn:hover > .check-mark-span{
     visibility: visible;
 }
