@@ -156,6 +156,10 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 1s;
+}
+.check-btn:active{
+    transform: scale(2);
 }
 .check-btn:hover{
     background-color: hsla(0,0%,50.2%,.2);

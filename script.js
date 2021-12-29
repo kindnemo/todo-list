@@ -15,6 +15,9 @@ date.textContent = new Date().toDateString().slice(0,11);
 
 
 function addTask(){
+    if(taskInput.value == ""){
+        return;
+    }
     //CREATING THE CHECK MARK BUTTON
     let checkBtn = document.createElement("BUTTON");
     checkBtn.classList.add("check-btn");
@@ -40,16 +43,27 @@ function addTask(){
     
     // Updates the nodelist clearTask everytime a task is created and adds the eventlistener to all of them
     clearTask = document.querySelectorAll(".check-btn");
-    clearTask.forEach(ele=>ele.addEventListener("click",clearsTask));
+    clearTask.forEach(ele=>ele.addEventListener("transitionend",clearsTask));
+    
+}
+
+function enterTask(eve){    //Function to add task when enter key is pressed
+    if(eve.keyCode == 13){
+        eve.preventDefault();
+        addTask();
+    }
 }
 
 function clearsTask(eve){
-    eve.target.closest("li").remove();
+    if(eve.propertyName.includes("transform")){
+        eve.target.closest("li").remove();
+    }
     
 }
 
 function taskInputDisplay(){                                 //Removes the display for the add task div so that it is off the screen
     taskInputDiv.classList.toggle("display-toggle");
+    taskInput.focus();
     taskAddPop[1].classList.toggle("display-toggle");
     taskAddPop[0].removeEventListener("click", taskInputDisplay);
 }
@@ -65,3 +79,4 @@ function cancelTask(){
 taskAdd.addEventListener("click", addTask);
 taskAddPop.forEach(nodes => nodes.addEventListener("click",taskInputDisplay))
 cancel.addEventListener("click", cancelTask);
+taskInput.addEventListener("keydown", enterTask)
