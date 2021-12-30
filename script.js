@@ -12,8 +12,6 @@ date.textContent = new Date().toDateString().slice(0,11);
 
 
 
-
-
 function addTask(){
     if(taskInput.value == ""){
         return;
@@ -43,7 +41,7 @@ function addTask(){
     
     // Updates the nodelist clearTask everytime a task is created and adds the eventlistener to all of them
     clearTask = document.querySelectorAll(".check-btn");
-    clearTask.forEach(ele=>ele.addEventListener("transitionend",clearsTask));
+    clearTask.forEach(ele=>ele.addEventListener("click",clearsTask));
     
 }
 
@@ -54,11 +52,25 @@ function enterTask(eve){    //Function to add task when enter key is pressed
     }
 }
 
+function addBtnAct(){
+    if(taskInput.value !== ""){
+        console.log("empty");
+        taskAdd.classList.remove("task-add-disable");
+        taskAdd.classList.add("task-add-active");
+    }else if(taskInput.value === ""){
+        taskAdd.classList.remove("task-add-active");
+        taskAdd.classList.add("task-add-disable");
+    }
+}
+
 function clearsTask(eve){
+    eve.target.closest("button").classList.toggle("check-btn-active");
+    clearTask.forEach(ele=>ele.addEventListener("transitionend",clearsTasks));
+}
+function clearsTasks(eve){          //Clears the task when transition is ended
     if(eve.propertyName.includes("transform")){
         eve.target.closest("li").remove();
     }
-    
 }
 
 function taskInputDisplay(){                                 //Removes the display for the add task div so that it is off the screen
@@ -71,6 +83,7 @@ function taskInputDisplay(){                                 //Removes the displ
 function cancelTask(){       
     taskInputDiv.classList.toggle("display-toggle");
     taskAddPop[1].classList.toggle("display-toggle");
+    taskInput.value = "";
     taskAddPop[0].addEventListener("click", taskInputDisplay);
 }
 
@@ -79,4 +92,5 @@ function cancelTask(){
 taskAdd.addEventListener("click", addTask);
 taskAddPop.forEach(nodes => nodes.addEventListener("click",taskInputDisplay))
 cancel.addEventListener("click", cancelTask);
-taskInput.addEventListener("keydown", enterTask)
+taskInput.addEventListener("keydown", enterTask);
+taskInput.addEventListener("keyup", addBtnAct);

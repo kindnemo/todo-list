@@ -101,16 +101,29 @@ h1{
     padding: 0 10px;
     border-radius: 5px;
 }
-#task-add{
-    background-color: rgb(222, 76, 74);
-    color: rgb(255, 255, 255);
+.task-add-disable{
+    background-color: #6B3130;
+    color: grey;
     border: none;
     margin-right: 12px;
+    cursor: not-allowed;
+}
+.task-add-active{
+    background-color: #de4c4a;
+    color: #ffff;
+    border: none;
+    margin-right: 12px;
+    cursor: pointer;
 }
 #cancel{
     background: transparent;
     border: 1px solid #525252;
     color: hsla(0,0%,100%,.88);
+    transition: 0.2s;
+}
+#cancel:hover{
+    background-color: #3d3d3d;
+    border-color: #393939;
 }
 
 .task-add-btns{       /*Substitute for #list-task-add-btn to tackle the precedence problem*/
@@ -156,10 +169,10 @@ li{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s;
+    transition: 0.3s;
 }
-.check-btn:active{
-    transform: scale(2);
+.check-btn-active{
+    transform: scale(1.3);
 }
 .check-btn:hover{
     background-color: hsla(0,0%,50.2%,.2);
