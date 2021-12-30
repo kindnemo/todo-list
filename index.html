@@ -53,23 +53,7 @@
                     <h1>Today</h1>
                     <span id="date">Today's date</span>
                 </header>
-                <ul id="tasks">
-                    <!-- <li>Tasks</li>
-                    <li>Tasks</li>
-                    <li>Tasks</li>
-                    <li>Tasks</li> -->
-                    <!-- <li>
-                        <button class="check-btn">
-                            <span class="check-mark-span">
-                                <img src="images/check-mark.png" alt="check-mark" class="check-mark-image">
-                            </span>
-                        </button>
-                        Tasks
-                    </li> -->
-                    <!-- <li>Tasks</li> -->
-                    <!-- <li>Tasks</li> -->
-                    <!-- <li>Tasks</li> -->
-                </ul>
+                <ul id="tasks"></ul>
                 <div id="task-add-form">
                     <div id="add-task-div" class="display-toggle">
                         <textarea name="" id="add-task-input" cols="30" rows="10" placeholder="Add a task here" autofocus></textarea>
@@ -84,7 +68,16 @@
                     </div>
                 </div>
             </div>
+            
+            <div id="empty-div">
+                <div id="empty">
+                    <img src="images/undraw_to_do_re_jaef.svg" alt="" id="empty-svg">
+                    <p id="empty-para">What tasks are on your mind?</p>
+                    <button id="empty-add" class="final-btn btn add-task task-add-btn btn">Add a task</button>
+                </div>
+            </div>
         </div>
+
     </div>
 </body>
 </html>
