@@ -25,11 +25,25 @@ body{
     gap: 12px;
 }
 
+.left-icon:hover, .right-icon:hover{
+    background-color: hsla(0,0%,100%,.2);
+}
+
+
 #profile-pic{
     height: 28px;
     width: 28px;
     border-radius: 100%;
 }
+.left-icon, .right-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 #task-div{
     margin: auto;
     margin-top: 50px;
