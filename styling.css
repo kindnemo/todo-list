@@ -225,3 +225,14 @@ li{
     border: 1px solid transparent;
     border-radius: 3px;
 }
+
+
+
+@media (max-width: 500px){
+    #navbar{
+        padding: 0 10px 0px 10px;
+    }
+    #left-icons, #right-icons{
+        gap: 5px;
+    }
+}
