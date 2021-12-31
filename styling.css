@@ -1,13 +1,227 @@
 body{
-    background-color: #1f1f1f;;
+    background-color: #1f1f1f;
+    font-family: 'Raleway', sans-serif;
+    color: white;
 }
+
+.btn{
+    cursor: pointer;
+}
+
 
 #navbar{
     background-color: #282828;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    padding: 0 42px 0 42px;
+}
+
+#left-icons, #right-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.left-icon:hover, .right-icon:hover{
+    background-color: hsla(0,0%,100%,.2);
+}
+
+
+#profile-pic{
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+}
+.left-icon, .right-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
 }
 
 #task-div{
-    background-color: blanchedalmond;
-    width: 80%;
     margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 55px 0 55px;
+}
+#main-ui{
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#tasks{
+    margin: 20px 0 10px 0;
+    flex: 1;
+}
+
+li{
+    height: 40px;
+    border-bottom: 1px solid gray;
+    border-color: hsla(0,0%,100%,.1);
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+header{
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+#date{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+}
+
+
+#add-task-input{
+    width: 100%;
+    height: 115px;
+    background-color: #171717;;
+    border: solid hsla(0,0%,100%,.1) 1px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px 10px;
+    resize: none;
+    color: hsla(0,0%,100%,.87);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+#add-task-input:focus{
+    border: solid hsla(0,0%,100%,.4) 1px;
+}
+#final-btns{
+    padding: 10px 0 0;
+    display: flex;
+}
+.final-btn{
+    font-size: 14px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.task-add-disable{
+    background-color: #6B3130;
+    color: grey;
+    border: none;
+    margin-right: 12px;
+    cursor: not-allowed;
+}
+.task-add-active{
+    background-color: #de4c4a;
+    color: #ffff;
+    border: none;
+    margin-right: 12px;
+    cursor: pointer;
+}
+#cancel{
+    background: transparent;
+    border: 1px solid #525252;
+    color: hsla(0,0%,100%,.88);
+    transition: 0.2s;
+}
+#cancel:hover{
+    background-color: #3d3d3d;
+    border-color: #393939;
+}
+
+.task-add-btns{       /*Substitute for #list-task-add-btn to tackle the precedence problem*/
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: grey;
+}
+#final-add-btn{
+    margin-right: 11px;
+    font-size: 20px;
+    color: #de4c4a;
+    border-radius: 50%;    
+}
+
+#list-task-add-btn:hover{
+    color: #de4c4a;
+}
+
+#list-task-add-btn:hover > #final-add-btn{
+    color: white;
+    background-color: #de4c4a;
+}
+
+.display-toggle{
+    display: none;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+.check-btn{
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background-color: transparent;
+    border: 1px solid grey;
+    cursor: pointer;
+    transition: 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.check-btn-active{
+    transform: scale(1.3);
+}
+.check-btn:hover{
+    background-color: hsla(0,0%,50.2%,.2);
+}
+.check-mark-image{
+    height: 10px;
+    width: 8px;
+}
+.check-mark-span{
+    visibility: hidden;
+}
+.check-btn:hover > .check-mark-span{
+    visibility: visible;
+}
+
+#empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#empty-svg{
+    width: 270px;
+    height: 250px;
+}
+#empty-add{
+    background-color: #de4c4a;
+    color: #ffff;
+    border: none;
+    margin-right: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 20px auto 0;
+    margin-top: 30px;
+    padding: 6px 12px 7px;
+    border: 1px solid transparent;
+    border-radius: 3px;
 }
